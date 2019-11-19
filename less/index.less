@@ -50,10 +50,98 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	
 }
 
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+// Variables
+
+@color: #2E2D2D;
+@padding-content: 30px 0px;
+@center-text: center;
+
+.border-bottom {
+	border-bottom: 1px solid @color;
+}
+
+.flex {
+	display: flex;
+}
+
+.page-width {
+	width: 85%;
+	margin: 0 auto;
+	padding: 0 20px;
+
+	@media (max-width: 910px) {
+		width: 90%;
+	} // @media (910px)
+
+	@media (max-width: 500px) {
+		width: 95%;
+	} // @media (800px)
+
+	.container {
+		.flex;
+		.border-bottom;
+	
+		h1, h2, h3, h4, h5, h6, p {
+			color: @color;
+			line-height: 1.5;
+			padding: 15px 0;
+		}
+	
+		.box {
+			padding: @padding-content;
+			width: 100%;
+		}
+	}
+}
+
+header, footer {
+	width: 100%;
+	box-shadow: 0px 0px 8px #494949;
+	background-color: @color;
+
+	nav {
+		.flex;
+		.border-bottom;
+		justify-content: flex-start;
+		padding: 20px 0;
+
+		& a {
+			padding-right: 70px;
+		}
+	
+		& a:link, & a:visited, & a:active, & a:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+		
+		@media (max-width: 910px) {
+			justify-content: space-between;
+		} // @media (910px)
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+			justify-content: center;
+	
+			& a {
+				text-align: @center-text;
+				padding: 15px 0;
+			} // @media (500px) a
+		} // @media (500px)
+	} // nav
+}

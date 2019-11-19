@@ -1,1 +1,228 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+.border-bottom {
+  border-bottom: 1px solid #2E2D2D;
+}
+.flex {
+  display: flex;
+}
+.page-width {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (max-width: 910px) {
+  .page-width {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .page-width {
+    width: 95%;
+  }
+}
+.page-width .container {
+  display: flex;
+  border-bottom: 1px solid #2E2D2D;
+}
+.page-width .container h1,
+.page-width .container h2,
+.page-width .container h3,
+.page-width .container h4,
+.page-width .container h5,
+.page-width .container h6,
+.page-width .container p {
+  color: #2E2D2D;
+  line-height: 1.5;
+  padding: 15px 0;
+}
+.page-width .container .box {
+  padding: 30px 0px;
+  width: 100%;
+}
+header,
+footer {
+  width: 100%;
+  box-shadow: 0px 0px 8px #494949;
+  background-color: #2E2D2D;
+}
+header nav,
+footer nav {
+  display: flex;
+  border-bottom: 1px solid #2E2D2D;
+  justify-content: flex-start;
+  padding: 20px 0;
+}
+header nav a,
+footer nav a {
+  padding-right: 70px;
+}
+header nav a:link,
+footer nav a:link,
+header nav a:visited,
+footer nav a:visited,
+header nav a:active,
+footer nav a:active,
+header nav a:hover,
+footer nav a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 910px) {
+  header nav,
+  footer nav {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 500px) {
+  header nav,
+  footer nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+  header nav a,
+  footer nav a {
+    text-align: center;
+    padding: 15px 0;
+  }
+}
