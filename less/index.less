@@ -50,10 +50,242 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: 'Kulim Park', sans-serif;
 }
 
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.8rem;
+}
+
+// Variables
+
+@color: #2E2D2D;
+@padding-content: 20px 0px;
+@center-text: center;
+
+.border-bottom {
+	border-bottom: 1px solid @color;
+}
+
+.flex {
+	display: flex;
+}
+
+.page-width {
+	width: 85%;
+	margin: 0 auto;
+	padding: 0 20px;
+
+	@media (max-width: 910px) {
+		width: 90%;
+	} // @media (910px)
+
+	@media (max-width: 500px) {
+		width: 95%;
+	} // @media (800px)
+
+	.container {
+		.flex;
+		.border-bottom;
+		justify-content: space-between;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		.full-box, .box {
+			padding: @padding-content;
+		}
+		  
+		.full-box {
+			width: 100%;
+
+			& a:link, & a:visited, & a:active, & a:hover {
+				color: @color;
+			}
+
+			& h2, & p {
+				color: @color;
+				line-height: 1.5;
+				padding: 15px 0;
+			}
+
+			& h2 {
+				font-size: 3rem;
+				text-align: @center-text
+			}
+
+			input[type="text"], textarea {
+				width: 100%;
+				margin: 1% 0%;
+				padding: 8px 10px;
+				outline: none;
+				font-size: inherit;
+				border-radius: 5px;
+				border: 2px solid @color;
+
+				&:focus {
+					border: 2px solid #4893C1;
+					box-shadow: 0px 0px 3px #4893C1;
+				}
+			}
+
+			textarea {
+				height: 200px;
+			}
+
+			button {
+				background-color: transparent;
+				padding: 10px;
+				font-size: inherit;
+				border-radius: 5px;
+				border: 1px solid @color;
+				outline: none;
+
+				&:hover {
+					box-shadow: 0px 0px 10px #494949;
+					background-color: #4893C1;
+					color: #fff;
+					border: 1px solid #4893C1;
+				}
+
+				@media (max-width: 500px) {
+					width: 100%;
+					text-align: @center-text;
+				}
+			}
+		}
+	
+		.box {
+			width: 48%;
+			margin: 1% 0;
+
+			@media (max-width: 910px) {
+				width: 100%;
+				order: 2;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+
+				& .intro-photo {
+					@media (max-width: 910px) {
+						display: none;
+					}
+				}
+
+				@media (max-width: 910px) {
+					width: 100%;
+					order: -1;
+				}
+			}
+
+			& a:link, & a:visited, & a:active, & a:hover {
+				color: @color;
+			}
+
+			& h2, & p {
+				color: @color;
+				line-height: 1.5;
+				padding: 15px 0;
+			}
+
+			& h2 {
+				font-size: 3rem;
+				text-align: @center-text
+			}
+
+			table {
+				table-layout: fixed;
+				width: 100%;
+
+				& i {
+					color: #4893C1;
+				} // Check mark
+			}
+
+			table td {
+				padding: 5px;
+			}
+
+			table tr td:nth-child(odd) {
+				width: 7%;
+			}
+
+			ul li {
+				list-style-type: disc;
+
+				@media (max-width: 500px) {
+					margin-left: 15px;
+					color: @color;
+				}
+			}
+		}
+	}
+
+	.container:last-child {
+		border-bottom: none;
+	}
+}
+
+header, footer {
+	width: 100%;
+	box-shadow: 0px 0px 10px #494949;
+	background-color: @color;
+}
+
+header {
+
+	nav {
+		.flex;
+		.border-bottom;
+		justify-content: space-between;
+		padding: 20px 0;
+	
+		& a:link, & a:visited, & a:active, & a:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+			justify-content: center;
+	
+			& a {
+				text-align: @center-text;
+				padding: 15px 0;
+			} // @media (500px) a
+		} // @media (500px)
+	} // nav
+}
+
+footer {
+	nav {
+		.flex;
+		.border-bottom;
+		justify-content: center;
+		padding: 10px 0;
+
+		& a {
+			margin: 0 5px;
+		}
+
+		& a:link, & a:visited, & a:active, & a:hover, & p {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		sup {
+			vertical-align: top;
+			font-size: 1.3rem;
+		}
+	}
+}
